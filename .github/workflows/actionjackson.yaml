@@ -12,6 +12,4 @@ jobs:
 
     - name: Run VBS script as admin
       run: |
-        echo Set objShell = CreateObject("Shell.Application") > temp.vbs
-        echo objShell.ShellExecute "cmd.exe", "/c cscript %cd%\script.vbs", "", "runas", 1 >> temp.vbs
-        cscript temp.vbs
+        cmd.exe /c cscript %cd%\script.vbs runas 1
