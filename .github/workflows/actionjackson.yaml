@@ -4,7 +4,8 @@ on: [push]
 
 jobs:
   run-vbs:
-    runs-on: windows-latest
+    runs-on: self-hosted
+    if: runner.labels.contains('DESKTOP-7NFAGLG')
 
     steps:
     - name: Checkout repository
